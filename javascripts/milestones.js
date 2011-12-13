@@ -1,41 +1,3 @@
-function load(cbMainseq) {
-    var opts = {
-        lines: 12, // The number of lines to draw
-        length: 7, // The length of each line
-        width: 4, // The line thickness
-        radius: 10, // The radius of the inner circle
-        color: '#ffffff', // #rgb or #rrggbb
-        speed: 1, // Rounds per second
-        trail: 60, // Afterglow percentage
-        shadow: false // Whether to render a shadow
-    };
-    var spinner = new Spinner(opts).spin(document.getElementById('mainseq'));
-
-    var counter = 0;
-    $('.milestone').load(function() {
-        counter++;
-        if (counter===6) {
-            spinner.stop();
-            logo();
-            cbMainseq();
-            $('#mainseq').css('z-index', '-100');
-        }
-    });
-
-    var images = [
-        '/images/star.png',
-        '/images/planet.png',
-        '/images/weather.png',
-        '/images/plant.png',
-        '/images/animal.png',
-        '/images/evolve.png'
-    ];
-    $.each($('.milestone'), function(index, elem) {
-        elem.src = images[index];
-    });
-
-}
-
 function color(i) {
     var r = i / 4;
     var b = 128 - i / 8;
@@ -106,5 +68,7 @@ function logo() {
 }
 
 $(function() {
-    load(mainseq);
+    logo();
+    mainseq();
+    $('#mainseq').css('z-index', '-100');
 });
