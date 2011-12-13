@@ -59,6 +59,31 @@ function mainseq(cbMilestone) {
         context.fillStyle = color(i);
         context.fillRect(i, 512 - Math.round(i * i * i * i / 2 / 1024 / 1024 / 1024), 10, 10);
     }
+
+    context.beginPath();
+    context.arc(75, 242, 49, 0, 2 * Math.PI, false);
+    context.strokeStyle = "#ffffff";
+    context.stroke();
+    context.closePath();
+
+    context.beginPath();
+    context.arc(40, 210, 7, 0, 2 * Math.PI, false);
+    context.fillStyle = "#ffff88";
+    context.fill();
+    context.closePath();
+
+    context.beginPath();
+    context.arc(80, 290, 10, 0, 2 * Math.PI, false);
+    context.fillStyle = "#8888ff";
+    context.fill();
+    context.closePath();
+
+    context.beginPath();
+    context.arc(122, 230, 5, 0, 2 * Math.PI, false);
+    context.fillStyle = "#888888";
+    context.fill();
+    context.closePath();
+
     cbMilestone();
 }
 
