@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0px;
+}
+
+#mainseq {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1024px;
+    height: 512px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.milestone {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+}
