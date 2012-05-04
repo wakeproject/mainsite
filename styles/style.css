@@ -1,38 +1,27 @@
 body {
-    background-color: black;
     color: white;
     margin: 0px;
-}
-
-#logo {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 160px;
-    height: 160px;
-    overflow: hidden;
+    background-image: url("http://wahlque.org/images/UGC_12158.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     background-color: black;
 }
 
-#content {
-    position: relative;
-    width: 960px;
-    height: 100%;
-    margin: 0 auto;
+#headline {
+    background:rgba(0,0,0,0);
 }
 
-#mainseq {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 960px;
-    height: 512px;
-    overflow: hidden;
-    background-color: black;
+#headline a {
+    color: white;
 }
 
-.milestone {
-    position: absolute;
-    width: 48px;
-    height: 48px;
+#language-selector {
+    margin-top: 8px;
+    text-align: left;
 }
+
+#language {
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
