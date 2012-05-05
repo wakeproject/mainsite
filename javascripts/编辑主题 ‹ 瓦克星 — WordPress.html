@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html xmlns="http://www.w3.org/1999/xhtml" class="ie8"  dir="ltr" lang="zh-CN">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml"  dir="ltr" lang="zh-CN">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>编辑主题 &lsaquo; 瓦克星 &#8212; WordPress</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var userSettings = {
+		'url': '/blog/',
+		'uid': '1',
+		'time':'1336202144'
+	},
+	ajaxurl = 'http://blog.wahlque.org/blog/wp-admin/admin-ajax.php',
+	pagenow = 'theme-editor',
+	typenow = '',
+	adminpage = 'theme-editor-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<link rel='stylesheet' href='http://blog.wahlque.org/blog/wp-admin/load-styles.php?c=1&amp;dir=ltr&amp;load=admin-bar,wp-admin&amp;ver=7f0753feec257518ac1fec83d5bced6a' type='text/css' media='all' />
+<link rel='stylesheet' id='colors-css'  href='http://blog.wahlque.org/blog/wp-admin/css/colors-fresh.css?ver=20111206' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='http://blog.wahlque.org/blog/wp-admin/css/ie.css?ver=20111130' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://blog.wahlque.org/blog/wp-admin/load-scripts.php?c=1&amp;load=jquery,utils&amp;ver=edec3fab0cb6297ea474806db1895fa7'></script>
+<style type="text/css" media="screen">
+.qtrans_title_input { border:0pt none; font-size:1.7em; outline-color:invert; outline-style:none; outline-width:medium; padding:0pt; width:100%; }
+.qtrans_title_wrap { border-color:#CCCCCC; border-style:solid; border-width:1px; padding:2px 3px; }
+#qtrans_textarea_content { padding:6px; border:0 none; line-height:150%; outline: none; margin:0pt; width:100%; -moz-box-sizing: border-box;-webkit-box-sizing: border-box; -khtml-box-sizing: border-box; box-sizing: border-box; }
+.qtrans_title { -moz-border-radius: 6px 6px 0 0;-webkit-border-top-right-radius: 6px; -webkit-border-top-left-radius: 6px; -khtml-border-top-right-radius: 6px; -khtml-border-top-left-radius: 6px;border-top-right-radius: 6px; border-top-left-radius: 6px; }
+.hide-if-no-js.wp-switch-editor.switch-tmce { margin-left:6px !important;}#qtranslate_debug { width:100%; height:200px }#postexcerpt textarea { height:4em; margin:0; width:98% }.qtranslate_lang_div { float:right; height:12px; width:18px; padding:6px 5px 8px 5px; cursor:pointer }.qtranslate_lang_div.active { background: #DFDFDF; border-left:1px solid #D0D0D0; border-right: 1px solid #F7F7F7; padding:6px 4px 8px 4px }p.error {background-color:#ffebe8;border-color:#c00;border-width:1px;border-style:solid;padding:0 .6em;margin:5px 15px 2px;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+p.error a{color:#c00;}
+#qs_boxes { margin-right:300px }
+#qs_boxes .postbox h3.hndle, #submitboxcontainer .postbox h3.hndle {cursor:auto}
+#qs_boxes div.inside {margin: 6px 6px 8px;}
+#submitboxcontainer { float:right; width:280px }
+#qs_content_preview { width:100%; height:200px }
+.service_description { margin-left:20px; margin-top:0 }
+#qtranslate-services h4 { margin-top:0 }
+#qtranslate-services h5 { margin-bottom:0 }
+#qtranslate-services .description { font-size:11px }
+#qtrans_select_translate { margin-right:11px }
+.qs_status { border:0 }
+.qs_no-bottom-border { border-bottom:0 !important }
+#submitboxcontainer p { margin:6px 6px ; }
+.qs_submit { text-align:right; padding:6px }
+</style>
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+</head>
+<body class="wp-admin no-js  theme-editor-php admin-bar branch-3-3 version-3-3-2 admin-color-fresh">
+<script type="text/javascript">document.body.className = document.body.className.replace('no-js','js');</script>
+
+<div id="wpwrap">
+
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<div id="adminmenushadow"></div>
+<ul id="adminmenu" role="navigation">
+
+
+	<li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<div class='wp-menu-image'><a href='index.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='index.php' class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" tabindex="1" aria-haspopup="true">仪表盘</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>仪表盘</div><ul><li class="wp-first-item"><a href='index.php' class="wp-first-item" tabindex="1">首页</a></li><li><a href='update-core.php' tabindex="1">更新 <span class='update-plugins count-0' title=''><span class='update-count'>0</span></span></a></li><li><a href='index.php?page=akismet-stats-display' tabindex="1">Akismet 统计</a></li></ul></div></div></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first" id="menu-posts">
+	<div class='wp-menu-image'><a href='edit.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='edit.php' class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first" tabindex="1" aria-haspopup="true">文章</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>文章</div><ul><li class="wp-first-item"><a href='edit.php' class="wp-first-item" tabindex="1">所有文章</a></li><li><a href='post-new.php' tabindex="1">写文章</a></li><li><a href='edit-tags.php?taxonomy=category' tabindex="1">分类目录</a></li><li><a href='edit-tags.php?taxonomy=post_tag' tabindex="1">标签</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+	<div class='wp-menu-image'><a href='upload.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='upload.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" tabindex="1" aria-haspopup="true">媒体</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>媒体</div><ul><li class="wp-first-item"><a href='upload.php' class="wp-first-item" tabindex="1">媒体库</a></li><li><a href='media-new.php' tabindex="1">添加</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-links" id="menu-links">
+	<div class='wp-menu-image'><a href='link-manager.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='link-manager.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-links" tabindex="1" aria-haspopup="true">链接</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>链接</div><ul><li class="wp-first-item"><a href='link-manager.php' class="wp-first-item" tabindex="1">全部链接</a></li><li><a href='link-add.php' tabindex="1">添加</a></li><li><a href='edit-tags.php?taxonomy=link_category' tabindex="1">链接分类目录</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+	<div class='wp-menu-image'><a href='edit.php?post_type=page'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='edit.php?post_type=page' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" tabindex="1" aria-haspopup="true">页面</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>页面</div><ul><li class="wp-first-item"><a href='edit.php?post_type=page' class="wp-first-item" tabindex="1">所有页面</a></li><li><a href='post-new.php?post_type=page' tabindex="1">新建页面</a></li></ul></div></div></li>
+	<li class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" id="menu-comments">
+	<div class='wp-menu-image'><a href='edit-comments.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='edit-comments.php' class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" tabindex="1">评论 <span class='awaiting-mod count-0'><span class='pending-count'>0</span></span></a></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<div class='wp-menu-image'><a href='themes.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='themes.php' class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-appearance menu-top-first" tabindex="1">外观</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>外观</div><ul><li class="wp-first-item"><a href='themes.php' class="wp-first-item" tabindex="1">主题</a></li><li><a href='widgets.php' tabindex="1">小工具</a></li><li><a href='nav-menus.php' tabindex="1">菜单</a></li><li><a href='themes.php?page=custom-background' tabindex="1">背景</a></li><li><a href='themes.php?page=custom-header' tabindex="1">顶部</a></li><li class="current"><a href='theme-editor.php' class="current" tabindex="1">编辑</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+	<div class='wp-menu-image'><a href='plugins.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='plugins.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" tabindex="1" aria-haspopup="true">插件 <span class='update-plugins count-0'><span class='plugin-count'>0</span></span></a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>插件 <span class='update-plugins count-0'><span class='plugin-count'>0</span></span></div><ul><li class="wp-first-item"><a href='plugins.php' class="wp-first-item" tabindex="1">已安装的插件</a></li><li><a href='plugin-install.php' tabindex="1">安装插件</a></li><li><a href='plugin-editor.php' tabindex="1">编辑</a></li><li><a href='plugins.php?page=akismet-key-config' tabindex="1">Akismet 配置</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+	<div class='wp-menu-image'><a href='users.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='users.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" tabindex="1" aria-haspopup="true">用户</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>用户</div><ul><li class="wp-first-item"><a href='users.php' class="wp-first-item" tabindex="1">所有用户</a></li><li><a href='user-new.php' tabindex="1">添加用户</a></li><li><a href='profile.php' tabindex="1">我的个人资料</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+	<div class='wp-menu-image'><a href='tools.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='tools.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" tabindex="1" aria-haspopup="true">工具</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>工具</div><ul><li class="wp-first-item"><a href='tools.php' class="wp-first-item" tabindex="1">可用工具</a></li><li><a href='import.php' tabindex="1">导入</a></li><li><a href='export.php' tabindex="1">导出</a></li></ul></div></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+	<div class='wp-menu-image'><a href='options-general.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><a href='options-general.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" tabindex="1" aria-haspopup="true">设置</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>设置</div><ul><li class="wp-first-item"><a href='options-general.php' class="wp-first-item" tabindex="1">常规</a></li><li><a href='options-writing.php' tabindex="1">撰写</a></li><li><a href='options-reading.php' tabindex="1">阅读</a></li><li><a href='options-discussion.php' tabindex="1">讨论</a></li><li><a href='options-media.php' tabindex="1">媒体</a></li><li><a href='options-privacy.php' tabindex="1">隐私</a></li><li><a href='options-permalink.php' tabindex="1">固定链接</a></li><li><a href='options-general.php?page=easy-wp-latex-lite.php' tabindex="1">Easy WP LaTeX Lite</a></li><li><a href='options-general.php?page=googleanalytics' tabindex="1">Google Analytics</a></li><li><a href='options-general.php?page=qtranslate' tabindex="1">语言</a></li><li><a href='options-general.php?page=wpsupercache' tabindex="1">WP Super Cache</a></li><li><a href='options-general.php?page=configure-smtp/configure-smtp.php' tabindex="1">SMTP</a></li></ul></div></div></li>
+	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-not-current-submenu menu-top toplevel_page_theme-editor?file=%2Fsrv%2Fwww%2Fblog.wahlque.org%2Fpublic%2Fblog%2Fwp-content%2Fthemes%2Fwahlque%2Fheader&theme=The+Wahlque+Theme&a=te&scrollto=911&lang=zh menu-top-first" id="toplevel_page_theme-editor-file--2Fsrv-2Fwww-2Fblog.wahlque.org-2Fpublic-2Fblog-2Fwp-content-2Fthemes-2Fwahlque-2Fheader-theme-The-Wahlque-Theme-a-te-scrollto-911-lang-zh">
+	<div class='wp-menu-image'><a href='theme-editor.php?file=%2Fsrv%2Fwww%2Fblog.wahlque.org%2Fpublic%2Fblog%2Fwp-content%2Fthemes%2Fwahlque%2Fheader.php&theme=The+Wahlque+Theme&a=te&scrollto=911&lang=zh'><img src="http://blog.wahlque.org/blog/wp-content/plugins/qtranslate/flags/cn.png" alt="" /></a></div><div class="wp-menu-arrow"><div></div></div><a href='theme-editor.php?file=%2Fsrv%2Fwww%2Fblog.wahlque.org%2Fpublic%2Fblog%2Fwp-content%2Fthemes%2Fwahlque%2Fheader.php&theme=The+Wahlque+Theme&a=te&scrollto=911&lang=zh' class="wp-not-current-submenu menu-top toplevel_page_theme-editor?file=%2Fsrv%2Fwww%2Fblog.wahlque.org%2Fpublic%2Fblog%2Fwp-content%2Fthemes%2Fwahlque%2Fheader&theme=The+Wahlque+Theme&a=te&scrollto=911&lang=zh menu-top-first" tabindex="1">中文</a></li>
+	<li class="wp-not-current-submenu menu-top toplevel_page_theme-editor?file=%2Fsrv%2Fwww%2Fblog.wahlque.org%2Fpublic%2Fblog%2Fwp-content%2Fthemes%2Fwahlque%2Fheader&theme=The+Wahlque+Theme&a=te&scrollto=911&lang=en menu-top-last" id="toplevel_page_theme-editor-file--2Fsrv-2Fwww-2Fblog.wahlque.org-2Fpublic-2Fblog-2Fwp-content-2Fthemes-2Fwahlque-2Fheader-theme-The-Wahlque-Theme-a-te-scrollto-911-lang-en">
+	<div class='wp-menu-image'><a href='theme-editor.php?file=%2Fsrv%2Fwww%2Fblog.wahlque.org%2Fpublic%2Fblog%2Fwp-content%2Fthemes%2Fwahlque%2Fheader.php&theme=The+Wahlque+Theme&a=te&scrollto=911&lang=en'><img src="http://blog.wahlque.org/blog/wp-content/plugins/qtranslate/flags/gb.png" alt="" /></a></div><div class="wp-menu-arrow"><div></div></div><a href='theme-editor.php?file=%2Fsrv%2Fwww%2Fblog.wahlque.org%2Fpublic%2Fblog%2Fwp-content%2Fthemes%2Fwahlque%2Fheader.php&theme=The+Wahlque+Theme&a=te&scrollto=911&lang=en' class="wp-not-current-submenu menu-top toplevel_page_theme-editor?file=%2Fsrv%2Fwww%2Fblog.wahlque.org%2Fpublic%2Fblog%2Fwp-content%2Fthemes%2Fwahlque%2Fheader&theme=The+Wahlque+Theme&a=te&scrollto=911&lang=en menu-top-last" tabindex="1">English</a></li><li id="collapse-menu" class="hide-if-no-js"><div id="collapse-button"><div></div></div><span>收起菜单</span></li></ul>
+</div>
+<div id="wpcontent">
+
+
+<div id="wpbody">
+
+<div id="wpbody-content">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+						
+							<li id="tab-link-overview" class="active">
+								<a href="#tab-panel-overview">
+									概述								</a>
+							</li>
+												</ul>
+					</div>
+
+										<div class="contextual-help-sidebar">
+						<p><strong>更多信息：</strong></p><p><a href="http://codex.wordpress.org/zh-cn:%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91" target="_blank">关于主题开发的中文文档</a></p><p><a href="http://codex.wordpress.org/zh-cn:%E4%B8%BB%E9%A2%98" target="_blank">关于使用主题的中文文档</a></p><p><a href="http://codex.wordpress.org/zh-cn:%E7%BC%96%E8%BE%91%E6%96%87%E4%BB%B6" target="_blank">关于编辑文件的中文文档</a></p><p><a href="http://codex.wordpress.org/zh-cn:%E6%A8%A1%E6%9D%BF%E6%A0%87%E7%AD%BE" target="_blank">关于模板标签的中文文档</a></p><p><a href="http://cn.forums.wordpress.org" target="_blank">中文支持论坛</a></p>					</div>
+					
+					<div class="contextual-help-tabs-wrap">
+						
+							<div id="tab-panel-overview" class="active help-tab-content">
+								<p>您可以使用“主题编辑器”来编辑主题中包含的 CSS 和 PHP 文件。</p>
+	<p>要开始，请在右上角选择一个主题，并点击“选择”。然后在出现的列表中点击要编辑的文件，文件就会被加载在编辑区域中。</p>
+	<p>对于 PHP 文件，您可以使用“文档”下拉列表选择我们从文件中识别出的函数。点击“查询”按钮可查看有关该函数的页面。</p>
+	<p>当编辑完成时，请点击“上传文件”。</p>
+	<p><strong>建议：</strong>若您编辑您正在使用的主题，编辑不当则可能造成站点的故障。</p>
+	<p>升级新版本的主题将会导致您所做的修改被覆盖。要避免类似悲剧的发生，请考虑自建一个<a href="http://codex.wordpress.org/zh-cn:%E5%AD%90%E4%B8%BB%E9%A2%98" target="_blank">子主题</a>。</p>							</div>
+											</div>
+				</div>
+			</div>
+				</div>
+				<div id="screen-meta-links">
+					<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<a href="#contextual-help-wrap" id="contextual-help-link" class="show-settings">帮助</a>
+			</div>
+				</div>
+		 <div id="message" class="updated"><p>文件修改成功。</p></div>
+<div class="wrap">
+<div id="icon-themes" class="icon32"><br /></div><h2>编辑主题</h2>
+
+<div class="fileedit-sub">
+<div class="alignleft">
+<h3>The Wahlque Theme: 顶部 <span>(header.php)</span></h3>
+</div>
+<div class="alignright">
+	<form action="theme-editor.php" method="post">
+		<strong><label for="theme">选择要编辑的主题： </label></strong>
+		<select name="theme" id="theme">
+
+	<option value="Brunelleschi" >Brunelleschi</option>
+	<option value="Hatch" >Hatch</option>
+	<option value="Origin" >Origin</option>
+	<option value="The Bootstrap" >The Bootstrap</option>
+	<option value="Twenty Eleven" >Twenty Eleven</option>
+	<option value="Twenty Ten" >Twenty Ten</option>
+	<option value="The Wahlque Theme"  selected='selected'>The Wahlque Theme</option>		</select>
+		<input type="submit" name="Submit" id="Submit" class="button" value="- 选择 -"  />	</form>
+</div>
+<br class="clear" />
+</div>
+	<div id="templateside">
+	<h3>模板</h3>
+		<ul>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2F404.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">404 模板<br /><span class='nonessential'>(404.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-aside.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-aside.php<br /><span class='nonessential'>(content-aside.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-chat.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-chat.php<br /><span class='nonessential'>(content-chat.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-gallery.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-gallery.php<br /><span class='nonessential'>(content-gallery.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-image.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-image.php<br /><span class='nonessential'>(content-image.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-link.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-link.php<br /><span class='nonessential'>(content-link.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-no-results.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-no-results.php<br /><span class='nonessential'>(content-no-results.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-page.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-page.php<br /><span class='nonessential'>(content-page.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-quote.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-quote.php<br /><span class='nonessential'>(content-quote.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-single.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-single.php<br /><span class='nonessential'>(content-single.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-status.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-status.php<br /><span class='nonessential'>(content-status.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent-video.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content-video.php<br /><span class='nonessential'>(content-video.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpartials%2Fcontent.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">content.php<br /><span class='nonessential'>(content.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Finc%2Fcustom-header.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">custom-header.php<br /><span class='nonessential'>(custom-header.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fsidebar-image.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">sidebar-image.php<br /><span class='nonessential'>(sidebar-image.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Finc%2Ftemplate-tags.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">template-tags.php<br /><span class='nonessential'>(template-tags.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Finc%2Fthe-bootstrap-image-meta-widget.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">the-bootstrap-image-meta-widget.php<br /><span class='nonessential'>(the-bootstrap-image-meta-widget.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fauthor.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">作者模板<br /><span class='nonessential'>(author.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fcategory.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">分类目录模板<br /><span class='nonessential'>(category.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fimage.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">图片附件模板<br /><span class='nonessential'>(image.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Ffooter.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">底部<br /><span class='nonessential'>(footer.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fsearchform.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">搜索框<br /><span class='nonessential'>(searchform.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fsearch.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">搜索结果<br /><span class='nonessential'>(search.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Farchive.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">文章归档<br /><span class='nonessential'>(archive.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fsingle.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">文章页面<br /><span class='nonessential'>(single.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Ftag.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">标签模板<br /><span class='nonessential'>(tag.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Ffunctions.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">模板函数<br /><span class='nonessential'>(functions.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fcomments.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">评论<br /><span class='nonessential'>(comments.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fsidebar.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">边栏<br /><span class='nonessential'>(sidebar.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fpage.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">页面模板<br /><span class='nonessential'>(page.php)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fheader.php&amp;theme=The+Wahlque+Theme&amp;dir=theme"><span class='highlight'>顶部<br /><span class='nonessential'>(header.php)</span></span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Findex.php&amp;theme=The+Wahlque+Theme&amp;dir=theme">首页模板<br /><span class='nonessential'>(index.php)</span></a></li>
+	</ul>
+	<h3>样式</h3>
+	<ul>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fstyle.min.css&amp;theme=The+Wahlque+Theme&amp;dir=style">style.min.css<br /><span class='nonessential'>(style.min.css)</span></a></li>
+		<li><a href="theme-editor.php?file=%2Fthemes%2Fwahlque%2Fstyle.css&amp;theme=The+Wahlque+Theme&amp;dir=style">样式表<br /><span class='nonessential'>(style.css)</span></a></li>
+	</ul>
+</div>
+	<form name="template" id="template" action="theme-editor.php" method="post">
+	<input type="hidden" id="_wpnonce" name="_wpnonce" value="5ee3526afc" /><input type="hidden" name="_wp_http_referer" value="/blog/wp-admin/theme-editor.php?file=/srv/www/blog.wahlque.org/public/blog/wp-content/themes/wahlque/header.php&amp;theme=The+Wahlque+Theme&amp;a=te&amp;scrollto=911" />		 <div><textarea cols="70" rows="25" name="newcontent" id="newcontent" tabindex="1">&lt;?php
+/** header.php
+ *
+ * The Header for our theme.
+ *
+ * Displays all of the &lt;head&gt; section and everything up till &lt;div id=&quot;main&quot;&gt;
+ *
+ * @author		Mingli Yuan
+ * @package		The Bootstrap
+ * @since		1.0 - 05.02.2012
+ */
+
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;&lt;?php language_attributes(); ?&gt;&quot;&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;profile&quot; href=&quot;http://gmpg.org/xfn/11&quot; /&gt;
+    &lt;meta charset=&quot;&lt;?php bloginfo( &#039;charset&#039; ); ?&gt;&quot; /&gt;
+    &lt;title&gt;&lt;?php wp_title( &#039;&amp;laquo;&#039;, true, &#039;right&#039; ); ?&gt;&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href=&quot;http://wahlque.org/bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;http://wahlque.org/bootstrap/css/bootstrap-responsive.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;http://wahlque.org/styles/style.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML5 elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le fav and touch icons --&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;http://wahlque.org/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;http://wahlque.org/apple-touch-icon.png&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
+      &lt;div class=&quot;navbar-inner&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+          &lt;h1&gt;
+              &lt;a href=&quot;&lt;?php echo esc_url( home_url( &#039;/&#039; ) ); ?&gt;&quot; title=&quot;&lt;?php echo esc_attr( get_bloginfo( &#039;name&#039;, &#039;display&#039; ) ); ?&gt;&quot; rel=&quot;home&quot;&gt;
+              &lt;span&gt;&lt;?php bloginfo( &#039;name&#039; ); ?&gt;&lt;/span&gt;
+              &lt;/a&gt;
+          &lt;/h1&gt;
+          &lt;div class=&quot;nav-collapse&quot;&gt;
+            &lt;ul class=&quot;nav&quot;&gt;
+              &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;http://blog.wahlque.org/&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;http://wiki.wahlque.org/&quot;&gt;Wiki&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;http://playground.wahlque.org/&quot;&gt;Playground&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;https://github.com/Wahlque&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+          &lt;div class=&quot;pull-right&quot;&gt;
+            &lt;div id=&quot;language-selector&quot; class=&quot;btn-group&quot;&gt;
+            &lt;button id=&quot;language&quot; class=&quot;btn&quot;&gt;
+                &lt;span&gt;&lt;img class=&quot;flag&quot; src=&quot;/flags/en-us.png&quot; /&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+            &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;ul id=&quot;languages&quot; class=&quot;dropdown-menu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;/en-us&quot;&gt;&lt;img class=&quot;flag&quot; src=&quot;http://wahlque.org/flags/en-us.png&quot; /&gt; en-us&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/zh-cn&quot;&gt;&lt;img class=&quot;flag&quot; src=&quot;http://wahlque.org/flags/zh-cn.png&quot; /&gt; zh-cn&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/zh-hk&quot;&gt;&lt;img class=&quot;flag&quot; src=&quot;http://wahlque.org/flags/zh-hk.png&quot; /&gt; zh-hk&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/zh-sg&quot;&gt;&lt;img class=&quot;flag&quot; src=&quot;http://wahlque.org/flags/zh-sg.png&quot; /&gt; zh-sg&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/zh-tw&quot;&gt;&lt;img class=&quot;flag&quot; src=&quot;http://wahlque.org/flags/zh-tw.png&quot; /&gt; zh-tw&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+
+
+/* End of file header.php */
+/* Location: ./wp-content/themes/wahlque/header.php */</textarea>
+		 <input type="hidden" name="action" value="update" />
+		 <input type="hidden" name="file" value="/srv/www/blog.wahlque.org/public/blog/wp-content/themes/wahlque/header.php" />
+		 <input type="hidden" name="theme" value="The Wahlque Theme" />
+		 <input type="hidden" name="scrollto" id="scrollto" value="911" />
+		 </div>
+			<div id="documentation" class="hide-if-no-js">
+		<label for="docs-list">文档：</label>
+		<select name="docs-list" id="docs-list"><option value="">函数名...</option><option value="bloginfo">bloginfo()</option><option value="esc_attr">esc_attr()</option><option value="esc_url">esc_url()</option><option value="get_bloginfo">get_bloginfo()</option><option value="home_url">home_url()</option><option value="language_attributes">language_attributes()</option><option value="wp_title">wp_title()</option></select>		<input type="button" class="button" value=" 查询 " onclick="if ( '' != jQuery('#docs-list').val() ) { window.open( 'http://api.wordpress.org/core/handbook/1.0/?function=' + escape( jQuery( '#docs-list' ).val() ) + '&amp;locale=zh_CN&amp;version=3.3.2&amp;redirect=true'); }" />
+		</div>
+	
+		<div>
+		<p class="submit"><input type="submit" name="submit" id="submit" class="button-primary" value="更新文件" tabindex="2"  /></p>		</div>
+	</form>
+<br class="clear" />
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery(document).ready(function($){
+	$('#template').submit(function(){ $('#scrollto').val( $('#newcontent').scrollTop() ); });
+	$('#newcontent').scrollTop( $('#scrollto').val() );
+});
+/* ]]> */
+</script>
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="footer">
+<p id="footer-left" class="alignleft"><span id="footer-thankyou">感谢使用 <a href="http://cn.wordpress.org/">WordPress</a> 进行创作</span></p>
+<p id="footer-upgrade" class="alignright">3.3.2 版本</p>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">
+// <![CDATA[
+if(jQuery('#excerpt').size()>0) {
+		qtrans_isArray = function(obj) {
+		   if (obj.constructor.toString().indexOf('Array') == -1)
+			  return false;
+		   else
+			  return true;
+		}
+		
+		String.prototype.xsplit = function(_regEx){
+			// Most browsers can do this properly, so let them — they'll do it faster
+			if ('a~b'.split(/(~)/).length === 3) { return this.split(_regEx); }
+
+			if (!_regEx.global)
+			{ _regEx = new RegExp(_regEx.source, 'g' + (_regEx.ignoreCase ? 'i' : '')); }
+
+			// IE (and any other browser that can't capture the delimiter)
+			// will, unfortunately, have to be slowed down
+			var start = 0, arr=[];
+			var result;
+			while((result = _regEx.exec(this)) != null){
+				arr.push(this.slice(start, result.index));
+				if(result.length > 1) arr.push(result[1]);
+				start = _regEx.lastIndex;
+			}
+			if(start < this.length) arr.push(this.slice(start));
+			if(start == this.length) arr.push(''); //delim at the end
+			return arr;
+		};
+		
+		qtrans_split = function(text) {
+			var split_regex = /(<!--.*?-->)/gi;
+			var lang_begin_regex = /<!--:([a-z]{2})-->/gi;
+			var lang_end_regex = /<!--:-->/gi;
+			var morenextpage_regex = /(<!--more-->|<!--nextpage-->)+$/gi;
+			var matches = null;
+			var result = new Object;
+			var matched = false;
+		
+			result['zh'] = '';
+			
+			result['en'] = '';
+			
+			
+			var blocks = text.xsplit(split_regex);
+			if(qtrans_isArray(blocks)) {
+				for (var i = 0;i<blocks.length;i++) {
+					if((matches = lang_begin_regex.exec(blocks[i])) != null) {
+						matched = matches[1];
+					} else if(lang_end_regex.test(blocks[i])) {
+						matched = false;
+					} else {
+						if(matched) {
+							result[matched] += blocks[i];
+						} else {
+		
+							result['zh'] += blocks[i];
+			
+							result['en'] += blocks[i];
+			
+						}
+					}
+				}
+			}
+			for (var i = 0;i<result.length;i++) {
+				result[i] = result[i].replace(morenextpage_regex,'');
+			}
+			return result;
+		}
+		
+		qtrans_integrate = function(lang, lang_text, text) {
+			var texts = qtrans_split(text);
+			var moreregex = /<!--more-->/i;
+			var text = '';
+			var max = 0;
+			var morenextpage_regex = /(<!--more-->|<!--nextpage-->)+$/gi;
+			
+			texts[lang] = lang_text;
+		
+			texts['zh'] = texts['zh'].split(moreregex);
+			if(!qtrans_isArray(texts['zh'])) {
+				texts['zh'] = [texts['zh']];
+			}
+			if(max < texts['zh'].length) max = texts['zh'].length;
+			
+			texts['en'] = texts['en'].split(moreregex);
+			if(!qtrans_isArray(texts['en'])) {
+				texts['en'] = [texts['en']];
+			}
+			if(max < texts['en'].length) max = texts['en'].length;
+			
+			for(var i=0; i<max; i++) {
+				if(i >= 1) {
+					text += '<!--more-->';
+				}
+		
+				if(texts['zh'][i] && texts['zh'][i]!=''){
+					text += '<!--:zh-->';
+					text += texts['zh'][i];
+					text += '<!--:-->';
+				}
+			
+				if(texts['en'][i] && texts['en'][i]!=''){
+					text += '<!--:en-->';
+					text += texts['en'][i];
+					text += '<!--:-->';
+				}
+			
+			}
+			text = text.replace(morenextpage_regex,'');
+			return text;
+		}
+		
+		function qtrans_switch_postbox(parent, target, lang) {
+	
+				jQuery('#'+target).val(qtrans_integrate('zh', jQuery('#qtrans_textarea_'+target+'_'+'zh').val(), jQuery('#'+target).val()));
+				jQuery('#'+parent+' .qtranslate_lang_div').removeClass('switch-html');
+				jQuery('#'+parent+' .qtranslate_lang_div').removeClass('switch-tmce');
+				if(lang!=false) jQuery('#qtrans_textarea_'+target+'_'+'zh').hide();
+			
+				jQuery('#'+target).val(qtrans_integrate('en', jQuery('#qtrans_textarea_'+target+'_'+'en').val(), jQuery('#'+target).val()));
+				jQuery('#'+parent+' .qtranslate_lang_div').removeClass('switch-html');
+				jQuery('#'+parent+' .qtranslate_lang_div').removeClass('switch-tmce');
+				if(lang!=false) jQuery('#qtrans_textarea_'+target+'_'+'en').hide();
+			
+			if(lang!=false) {
+				jQuery('#qtrans_switcher_'+parent+'_'+lang).addClass('switch-tmce');
+				jQuery('#qtrans_switcher_'+parent+'_'+lang).addClass('switch-html');
+				jQuery('#qtrans_textarea_'+target+'_'+lang).show().focus();
+			}
+		}
+	
+		qtrans_use = function(lang, text) {
+			var result = qtrans_split(text);
+			return result[lang];
+		}
+		
+		jQuery('#postexcerpt .handlediv').after('<div class="qtranslate_lang_div" id="qtrans_switcher_postexcerpt_zh"><img alt="zh" title="中文" src="http://blog.wahlque.org/blog/wp-content/plugins/qtranslate/flags/cn.png" /></div>');
+		jQuery('#qtrans_switcher_postexcerpt_zh').click(function() {qtrans_switch_postbox('postexcerpt','excerpt','zh');});
+		
+		jQuery('#excerpt').after('<textarea name="qtrans_textarea_excerpt_zh" id="qtrans_textarea_excerpt_zh"></textarea>');
+		jQuery('#qtrans_textarea_excerpt_zh').attr('cols', jQuery('#excerpt').attr('cols'));
+		jQuery('#qtrans_textarea_excerpt_zh').attr('rows', jQuery('#excerpt').attr('rows'));
+		jQuery('#qtrans_textarea_excerpt_zh').attr('tabindex', jQuery('#excerpt').attr('tabindex'));
+		jQuery('#qtrans_textarea_excerpt_zh').blur(function() {qtrans_switch_postbox('postexcerpt','excerpt',false);});
+		jQuery('#qtrans_textarea_excerpt_zh').val(qtrans_use('zh',jQuery('#excerpt').val()));
+		
+		jQuery('#postexcerpt .handlediv').after('<div class="qtranslate_lang_div" id="qtrans_switcher_postexcerpt_en"><img alt="en" title="English" src="http://blog.wahlque.org/blog/wp-content/plugins/qtranslate/flags/gb.png" /></div>');
+		jQuery('#qtrans_switcher_postexcerpt_en').click(function() {qtrans_switch_postbox('postexcerpt','excerpt','en');});
+		
+		jQuery('#excerpt').after('<textarea name="qtrans_textarea_excerpt_en" id="qtrans_textarea_excerpt_en"></textarea>');
+		jQuery('#qtrans_textarea_excerpt_en').attr('cols', jQuery('#excerpt').attr('cols'));
+		jQuery('#qtrans_textarea_excerpt_en').attr('rows', jQuery('#excerpt').attr('rows'));
+		jQuery('#qtrans_textarea_excerpt_en').attr('tabindex', jQuery('#excerpt').attr('tabindex'));
+		jQuery('#qtrans_textarea_excerpt_en').blur(function() {qtrans_switch_postbox('postexcerpt','excerpt',false);});
+		jQuery('#qtrans_textarea_excerpt_en').val(qtrans_use('en',jQuery('#excerpt').val()));
+		qtrans_switch_postbox('postexcerpt','excerpt','zh');jQuery('#excerpt').hide();}// ]]>
+</script>
+		<div id="wpadminbar" class="nojq nojs" role="navigation">
+			<div class="quicklinks">
+				<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+		<li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" tabindex="10" aria-haspopup="true" href="http://blog.wahlque.org/blog/wp-admin/about.php" title="关于 WordPress"><span class="ab-icon"></span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+		<li id="wp-admin-bar-about" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-admin/about.php">关于 WordPress</a>		</li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+		<li id="wp-admin-bar-wporg" class=""><a class="ab-item" tabindex="10" href="http://cn.wordpress.org">WordPress.org</a>		</li>
+		<li id="wp-admin-bar-documentation" class=""><a class="ab-item" tabindex="10" href="http://codex.wordpress.org/zh-cn:Main_Page">文档</a>		</li>
+		<li id="wp-admin-bar-support-forums" class=""><a class="ab-item" tabindex="10" href="http://zh-cn.forums.wordpress.org/">支持论坛</a>		</li>
+		<li id="wp-admin-bar-feedback" class=""><a class="ab-item" tabindex="10" href="http://zh-cn.forums.wordpress.org/forum/suggestions">反馈</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" tabindex="10" aria-haspopup="true" href="http://blog.wahlque.org/">瓦克星</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+		<li id="wp-admin-bar-view-site" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/">查看站点</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-comments" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-admin/edit-comments.php" title="0 条评论待审"><span class="ab-icon"></span><span id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-0">0</span></a>		</li>
+		<li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" tabindex="10" aria-haspopup="true" href="http://blog.wahlque.org/blog/wp-admin/post-new.php" title="添加"><span class="ab-icon"></span><span class="ab-label">新建</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+		<li id="wp-admin-bar-new-post" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-admin/post-new.php">文章</a>		</li>
+		<li id="wp-admin-bar-new-media" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-admin/media-new.php">媒体</a>		</li>
+		<li id="wp-admin-bar-new-link" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-admin/link-add.php">链接</a>		</li>
+		<li id="wp-admin-bar-new-page" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-admin/post-new.php?post_type=page">页面</a>		</li>
+		<li id="wp-admin-bar-new-user" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-admin/user-new.php">用户</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-delete-cache" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-admin/options-general.php?page=wpsupercache&#038;action=delete&#038;path=%2Fblog%2Fwp-admin%2Ftheme-editor.php%3Ffile%3D%2Fsrv%2Fwww%2Fblog.wahlque.org%2Fpublic%2Fblog%2Fwp-content%2Fthemes%2Fwahlque%2Fheader.php%26theme%3DThe%2BWahlque%2BTheme%26a%3Dte%26scrollto%3D911&#038;_wpnonce=f5b16d96eb">删除缓存</a>		</li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+		<li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" tabindex="10" aria-haspopup="true" href="http://blog.wahlque.org/blog/wp-admin/profile.php" title="我的账户">您好，mountain<img alt='' src='http://1.gravatar.com/avatar/f800d89a2079ea242497978640da2704?s=16&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D16&amp;r=G' class='avatar avatar-16 photo' height='16' width='16' /></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class=" ab-submenu">
+		<li id="wp-admin-bar-user-info" class=""><a class="ab-item" tabindex="-1" href="http://blog.wahlque.org/blog/wp-admin/profile.php"><img alt='' src='http://1.gravatar.com/avatar/f800d89a2079ea242497978640da2704?s=64&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D64&amp;r=G' class='avatar avatar-64 photo' height='64' width='64' /><span class='display-name'>mountain</span></a>		</li>
+		<li id="wp-admin-bar-edit-profile" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-admin/profile.php">编辑我的个人资料</a>		</li>
+		<li id="wp-admin-bar-logout" class=""><a class="ab-item" tabindex="10" href="http://blog.wahlque.org/blog/wp-login.php?action=logout&#038;_wpnonce=b64feeeb00">登出</a>		</li></ul></div>		</li></ul>			</div>
+		</div>
+
+		
+<script type='text/javascript'>
+/* <![CDATA[ */
+var commonL10n = {"warnDelete":"\u60a8\u5c06\u6c38\u4e45\u5220\u9664\u6240\u9009\u9879\u76ee\u3002\n \u70b9\u51fb\u201c\u53d6\u6d88\u201d\u505c\u6b62\uff0c\u70b9\u51fb\u201c\u786e\u5b9a\u201d\u5220\u9664\u3002"};/* ]]> */
+</script>
+<script type='text/javascript' src='http://blog.wahlque.org/blog/wp-admin/load-scripts.php?c=1&amp;load=admin-bar,hoverIntent,common,jquery-color&amp;ver=15691a0adb191883250e09683dab70bd'></script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+</body>
+</html>
