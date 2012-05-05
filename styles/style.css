@@ -18,6 +18,7 @@ body {
 #language-selector {
     margin-top: 8px;
     text-align: left;
+    width: 64px;
 }
 
 #language {
