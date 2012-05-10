@@ -26,3 +26,16 @@ body {
     padding-bottom: 2px;
 }
 
+.alignright {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+}
+
+.aligncenter {
+    margin: 0px auto;
+}
+
+
