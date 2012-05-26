@@ -3,7 +3,7 @@ body {
     margin: 0px;
     background-image: url("http://wahlque.org/images/UGC_12158.jpg");
     background-position: 50% 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-color: black;
 }
 
